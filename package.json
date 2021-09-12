@@ -1,5 +1,6 @@
 {
   "name": "hover-expand",
+  "homepage": "https://cristianaragao.github.io/expand-hover",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

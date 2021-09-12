@@ -94,7 +94,7 @@ export const Title = styled.div`
         font-size: 18px;
         font-weight: bold;
         margin: 0;
-        color: rgba(255, 255, 255, 0.8);
+        color: rgba(255, 255, 255, 0.7);
     }
 
     min-height: 150px;

@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+
+import Card from './components/Card';
+
+import './index.css'
+
+import { getHomeList } from './services/services';
 
 function App() {
+
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+
+    const loadAll = async () => {
+      
+      const listAux = await getHomeList();
+
+      console.log(listAux);
+
+      setList(listAux[0].items.results);
+
+    };
+
+    loadAll();
+
+  }, []);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="content" style={{ paddingTop: '200px', display: 'flex',  width: '100%'}}>
+      {
+        list.filter((item, index) => index <= 5).map((item, index) => (
+          <Card item={item} key={index}/>
+        ))
+      }
     </div>
   );
 }

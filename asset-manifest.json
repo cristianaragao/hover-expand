@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/expand-hover/static/css/main.1cb79f58.chunk.css",
+    "main.js": "/expand-hover/static/js/main.9fe5dd7b.chunk.js",
+    "main.js.map": "/expand-hover/static/js/main.9fe5dd7b.chunk.js.map",
+    "runtime-main.js": "/expand-hover/static/js/runtime-main.ed0cfd49.js",
+    "runtime-main.js.map": "/expand-hover/static/js/runtime-main.ed0cfd49.js.map",
+    "static/js/2.2b4cfd35.chunk.js": "/expand-hover/static/js/2.2b4cfd35.chunk.js",
+    "static/js/2.2b4cfd35.chunk.js.map": "/expand-hover/static/js/2.2b4cfd35.chunk.js.map",
+    "index.html": "/expand-hover/index.html",
+    "static/css/main.1cb79f58.chunk.css.map": "/expand-hover/static/css/main.1cb79f58.chunk.css.map",
+    "static/js/2.2b4cfd35.chunk.js.LICENSE.txt": "/expand-hover/static/js/2.2b4cfd35.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ed0cfd49.js",
+    "static/js/2.2b4cfd35.chunk.js",
+    "static/css/main.1cb79f58.chunk.css",
+    "static/js/main.9fe5dd7b.chunk.js"
+  ]
+}

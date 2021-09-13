@@ -12,8 +12,9 @@ export const Card = styled.div`
 
     --scale: 1.3;
     --translateX: 75px;
+    --translateY: -50px;
     --margin-sides: 5px;
-    --margin-vertical: 30px;
+    --margin-vertical: 0;
 
     cursor: pointer;
 
@@ -32,6 +33,7 @@ export const Card = styled.div`
     position: relative;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: transform 0.5s cubic-bezier(.25,.8,.25,1);
+    transition-delay: 0s;
 
     > .descrip {
         display: flex;
@@ -44,37 +46,67 @@ export const Card = styled.div`
         visibility: hidden;
         opacity: 0;
         transition: visibility 0.2s, height 0.2s, opacity 0.2s linear;
+        transition-delay: 0s;
     }
 
-    > div > h1 {
-        display: none;
+    > .title {
+        border-radius: 5px;
+
+        transition: border-radius 0.2s linear;
+    }
+
+    > .title > h1 {
+        visibility: hidden;
+        opacity: 0;
+
+        transition: visibility 0.2s, opacity 0.2s linear;
+        transition-delay: 0s;
     }
 
     &:hover {
         margin-top: calc(-1 * var(--margin-vertical));
-        transform: scale(var(--scale));
+        transform: translateY(var(--translateY)) scale(var(--scale));
         box-shadow: 0 6px 20px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
         z-index: 1;
 
-        > div > h1 {
-            display: flex;
-        }
+        transition-delay: 0.6s;
 
         > .descrip {
             visibility: visible;
             opacity: 1;
+            transition-delay: 0.6s;
         }
 
         &:first-child {
-            transform: translateX(calc(var(--translateX) - var(--margin-sides) - 20px)) scale(var(--scale));
+            transform: translateY(var(--translateY)) translateX(calc(var(--translateX) - var(--margin-sides) - 20px)) scale(var(--scale));
         }
         
         &:last-child {
-            transform: translateX(calc((var(--translateX) - var(--margin-sides) - 20px) * -1)) scale(var(--scale));
+            transform: translateY(var(--translateY)) translateX(calc((var(--translateX) - var(--margin-sides) - 20px) * -1)) scale(var(--scale));
         }
 
         > .title {
-            border-radius: 5px 5px 0px 0px;
+            border-radius: 5px 5px 0px 0;
+
+            visibility: visible;
+            opacity: 1;
+            transition-delay: 0.6s;
+        }
+
+        > .title {
+            border-radius: 5px 5px 0px 0;   
+
+            visibility: visible;
+            opacity: 1;
+            transition-delay: 0.6s;
+        }
+
+        > .title > h1 {
+            display: flex;
+            visibility: visible;
+            opacity: 1;
+
+            transition-delay: 0.8s;
         }
 
     }

@@ -28,7 +28,7 @@ function App() {
 
 
   return (
-    <div className="content" style={{ paddingTop: '200px', display: 'flex',  width: '100%'}}>
+    <div className="content" style={{ display: 'flex', alignItems: "center", justifyContent: "center" }}>
       {
         list.filter((item, index) => index <= 5).map((item, index) => (
           <Card item={item} key={index}/>

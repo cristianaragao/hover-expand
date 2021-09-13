@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import Card from './components/Card';
 
-import './index.css'
+import { GlobalStyles } from './GlobalStyles';
 
 import { getHomeList } from './services/services';
 
@@ -28,13 +28,16 @@ function App() {
 
 
   return (
-    <div className="content" style={{ display: 'flex', alignItems: "center", justifyContent: "center" }}>
-      {
-        list.filter((item, index) => index <= 5).map((item, index) => (
-          <Card item={item} key={index}/>
-        ))
-      }
-    </div>
+    <>
+      <div className="content" style={{ display: 'flex', alignItems: "center", justifyContent: "center" }}>
+        {
+          list.filter((item, index) => index <= 5).map((item, index) => (
+            <Card item={item} key={index}/>
+          ))
+        }
+      </div>
+      <GlobalStyles/>
+    </>
   );
 }
 

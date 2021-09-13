@@ -18,8 +18,7 @@ export const Card = styled.div`
 
     cursor: pointer;
 
-    background-color: rgb(20, 20, 20);
-    color: #fff;
+    color: ${ props => console.log(props)};
 
     border-radius: 5px;
 
@@ -31,11 +30,12 @@ export const Card = styled.div`
 
     transform: scale(1.0);
     position: relative;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: transform 0.5s cubic-bezier(.25,.8,.25,1);
+    transition: transform 0.5s cubic-bezier(.25,.8,.25,1), box-shadow 0.1s;
     transition-delay: 0s;
 
     > .descrip {
+
+        margin-top: -1px;
         display: flex;
         flex-direction: column;
         
@@ -66,7 +66,7 @@ export const Card = styled.div`
     &:hover {
         margin-top: calc(-1 * var(--margin-vertical));
         transform: translateY(var(--translateY)) scale(var(--scale));
-        box-shadow: 0 6px 20px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+        box-shadow: 0 0px 15px rgba(0,0,0,0.4);
         z-index: 1;
 
         transition-delay: 0.6s;
@@ -152,13 +152,13 @@ export const Infos = styled.div`
     display: flex;
     align-items: center;
 
-    padding: 0px 15px;
+    padding: 5px 15px;
 
     background-color: rgb(20, 20, 20);
 
     font-size: 12px;
 
-    margin: 0px 0px -1px 0px;
+    margin-top: -1px;
 
     width: 100%;
 
@@ -212,6 +212,8 @@ export const Infos = styled.div`
 
 export const Genres = styled.div`
 
+    margin-top: -1px;
+
     display: flex;
     align-items: center;
 
@@ -220,6 +222,10 @@ export const Genres = styled.div`
     padding: 10px 15px 15px 15px;
 
     font-size: 11px;
+
+    box-shadow: 0 0px 15px rgba(0,0,0,0.4);
+
+    border-radius: 0 0 5px 5px;
 
     > p {
         color: rgba(255, 255, 255, 0.5);
